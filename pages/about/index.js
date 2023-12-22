@@ -18,68 +18,116 @@ import {
 
 const aboutData = [
   {
+    id: 1,
     title: "skills",
     info: [
       {
+        id: 1,
         title: "Web Development",
         icons: [
-          <FaHtml5 />,
-          <FaCss3 />,
-          <FaJs />,
-          <FaReact />,
-          <SiNextdotjs />,
-          <SiFramer />,
-          <FaWordpress />,
+          {
+            id: 1,
+            icon: <FaHtml5 />
+          },
+          {
+            id: 2,
+            icon: <FaCss3 />
+          },
+          {
+            id: 3,
+            icon: <FaJs />
+          },
+          {
+            id: 4,
+            icon: <FaReact />
+          },
+          {
+            id: 5,
+            icon: <SiNextdotjs />
+          },
+          {
+            id: 6,
+            icon: <SiFramer />
+          },
+          {
+            id: 7,
+            icon: <FaWordpress />
+          }
         ],
       },
       {
+        id: 2,
         title: "UI/UX Design",
-        icons: [<FaFigma />, <SiAdobexd />, <SiAdobephotoshop />],
+        icons: [
+          {
+            id: 1,
+            icon: <FaFigma />
+          }, 
+          {
+            id: 2,
+            icon: <SiAdobexd />
+          }, 
+          {
+            id: 3,
+            icon: <SiAdobephotoshop />
+          }, 
+        ]
       },
     ],
   },
   {
+    id: 2,
     title: "awards",
     info: [
       {
+        id: 1,
         title: "Webby Awards - Honoree",
         stage: "2011 - 2012",
       },
       {
+        id: 2,
         title: "Adobe Design Achievement Awards - Finalist",
         stage: "2009 - 2010",
       },
     ],
   },
   {
+    id: 3,
     title: "experience",
     info: [
       {
+        id: 1,
         title: "UX/UI Designer - XYZ Company",
         stage: "2012 - 2023",
       },
       {
+        id: 2,
         title: "Web Developer - ABC Agency",
         stage: "2010 - 2012",
       },
       {
+        id: 3,
         title: "Intern - DEF Corporation",
         stage: "2008 - 2010",
       },
     ],
   },
   {
+    id: 4, 
     title: "credentials",
     info: [
       {
+        id: 1,
         title: "Web Development - ABC University, LA, CA",
         stage: "2011",
       },
       {
+        id: 2,
         title: "Computer Science Diploma - AV Technical Institute",
         stage: "2009",
       },
       {
+        id: 3,
         title: "Certified Graphic Designer - ABC Institute, Los Angeles, CA",
         stage: "2006",
       },
@@ -194,7 +242,7 @@ const About = () => {
           <div className="flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4">
             {aboutData.map((item, ind) => (
               <div
-                key={ind}
+                key={item.id}
                 className={`${
                   index === ind &&
                   "text-accent after:w-full after:bg-accent after:transition-all after:duration-300"
@@ -206,17 +254,17 @@ const About = () => {
             ))}
           </div>
           <div className="py-2 xl:py-6 flex flex-col gap-y-4 items-center xl:items-start">
-            {aboutData[index].info.map((item) => (
+            {aboutData[index].info.map((item, ind) => (
               <div
-                key={item.title}
+                key={item.id}
                 className="flex flex-col flex-1 md:flex-row max-w-max gap-x-2 items-center text-white/60"
               >
                 <div className="font-light mb-2 md:mb-0 ">{item.title}</div>
                 <div className="hidden md:flex">-</div>
                 <div>{item.stage}</div>
                 <div className="flex gap-x-4">
-                  {item.icons?.map((icon, ind) => (
-                    <div className="text-2xl text-white">{icon}</div>
+                  {item.icons?.map((icon) => (
+                    <div key={icon.id} className="text-2xl text-white">{icon.icon}</div>
                   ))}
                 </div>
               </div>
