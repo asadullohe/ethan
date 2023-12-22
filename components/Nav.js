@@ -41,7 +41,6 @@ const Nav = () => {
             } relative flex items-center group hover:text-accent transition-all duration-300`}
             key={ind}
             href={link.path}
-            children={link.icon}
           >
             <div className="absolute pr-14 right-0 hidden xl:group-hover:flex">
               <div className="bg-white relative flex text-primary items-center p-[6px] rounded-[3px]">
