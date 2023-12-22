@@ -38,7 +38,7 @@ const About = () => {
       >
         <Avatar />
       </motion.div>
-      <div className="container mx-auto h-full flex flex-col items-start justify-between xl:flex-row gap-x-8 pt-4 xl:pt-40">
+      <div className="container mx-auto h-full flex flex-col items-start justify-between xl:flex-row gap-x-8 pt-0 xl:pt-40">
         <div className="flex-1 flex flex-col justify-center mx-auto">
           <motion.h2
             variants={fadeIn("right", 0.2)}
@@ -53,7 +53,7 @@ const About = () => {
             variants={fadeIn("right", 0.4)}
             initial="hidden"
             animate="show"
-            className="max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0"
+            className="max-w-[500px] mx-auto xl:mx-0 mb-2 xl:mb-12 px-2 xl:px-0 md:text-[16px] text-[15px]"
           >
             I am an undergraduate student at the University of Geological
             Sciences. I am passionate about web development. I worked at Simplex
@@ -119,7 +119,7 @@ const About = () => {
           initial="hidden"
           animate="show"
           exit="hidden"
-          className="flex flex-col w-full xl:max-w-[40%] h-[480px] pt-10 xl:pt-0"
+          className="flex flex-col w-full xl:max-w-[40%] h-[480px] pt-0"
         >
           <div className="flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4">
             {aboutData.map((item, ind) => (
