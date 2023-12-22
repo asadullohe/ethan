@@ -16,125 +16,7 @@ import {
   SiAdobephotoshop,
 } from "react-icons/si";
 
-const aboutData = [
-  {
-    id: 1,
-    title: "skills",
-    info: [
-      {
-        id: 1,
-        title: "Web Development",
-        icons: [
-          {
-            id: 1,
-            icon: <FaHtml5 />
-          },
-          {
-            id: 2,
-            icon: <FaCss3 />
-          },
-          {
-            id: 3,
-            icon: <FaJs />
-          },
-          {
-            id: 4,
-            icon: <FaReact />
-          },
-          {
-            id: 5,
-            icon: <SiNextdotjs />
-          },
-          {
-            id: 6,
-            icon: <SiFramer />
-          },
-          {
-            id: 7,
-            icon: <FaWordpress />
-          }
-        ],
-      },
-      {
-        id: 2,
-        title: "UI/UX Design",
-        icons: [
-          {
-            id: 1,
-            icon: <FaFigma />
-          }, 
-          {
-            id: 2,
-            icon: <SiAdobexd />
-          }, 
-          {
-            id: 3,
-            icon: <SiAdobephotoshop />
-          }, 
-        ]
-      },
-    ],
-  },
-  {
-    id: 2,
-    title: "awards",
-    info: [
-      {
-        id: 1,
-        title: "Webby Awards - Honoree",
-        stage: "2011 - 2012",
-      },
-      {
-        id: 2,
-        title: "Adobe Design Achievement Awards - Finalist",
-        stage: "2009 - 2010",
-      },
-    ],
-  },
-  {
-    id: 3,
-    title: "experience",
-    info: [
-      {
-        id: 1,
-        title: "UX/UI Designer - XYZ Company",
-        stage: "2012 - 2023",
-      },
-      {
-        id: 2,
-        title: "Web Developer - ABC Agency",
-        stage: "2010 - 2012",
-      },
-      {
-        id: 3,
-        title: "Intern - DEF Corporation",
-        stage: "2008 - 2010",
-      },
-    ],
-  },
-  {
-    id: 4, 
-    title: "credentials",
-    info: [
-      {
-        id: 1,
-        title: "Web Development - ABC University, LA, CA",
-        stage: "2011",
-      },
-      {
-        id: 2,
-        title: "Computer Science Diploma - AV Technical Institute",
-        stage: "2009",
-      },
-      {
-        id: 3,
-        title: "Certified Graphic Designer - ABC Institute, Los Angeles, CA",
-        stage: "2006",
-      },
-    ],
-  },
-];
-
+import { v4 as uuidv4 } from "uuid";
 import Circles from "../../components/Circles";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../variants";
@@ -156,13 +38,13 @@ const About = () => {
       >
         <Avatar />
       </motion.div>
-      <div className="container mx-auto h-full flex flex-col items-start xl:flex-row gap-x-8 pt-4 xl:pt-20">
+      <div className="container mx-auto h-full flex flex-col items-start justify-between xl:flex-row gap-x-8 pt-4 xl:pt-40">
         <div className="flex-1 flex flex-col justify-center mx-auto">
           <motion.h2
             variants={fadeIn("right", 0.2)}
             initial="hidden"
             animate="show"
-            className="max-w-[576px] md:text-[48px] text-[26px] leading-[1.4] mb-4 xl:mb-6 font-bold"
+            className="max-w-[576px] md:text-[48px] text-[26px] leading-[1] mb-4 xl:mb-6 font-bold"
           >
             I am a <span className="text-accent">Junior</span> Front End
             developer
@@ -237,7 +119,7 @@ const About = () => {
           initial="hidden"
           animate="show"
           exit="hidden"
-          className="flex flex-col w-full xl:max-w-[48%] h-[480px] pt-8 xl:pt-0"
+          className="flex flex-col w-full xl:max-w-[40%] h-[480px] pt-10 xl:pt-0"
         >
           <div className="flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4">
             {aboutData.map((item, ind) => (
@@ -264,7 +146,9 @@ const About = () => {
                 <div>{item.stage}</div>
                 <div className="flex gap-x-4">
                   {item.icons?.map((icon) => (
-                    <div key={icon.id} className="text-2xl text-white">{icon.icon}</div>
+                    <div key={icon.id} className="text-2xl text-white">
+                      {icon.icon}
+                    </div>
                   ))}
                 </div>
               </div>
@@ -277,3 +161,122 @@ const About = () => {
 };
 
 export default About;
+
+const aboutData = [
+  {
+    id: uuidv4(),
+    title: "skills",
+    info: [
+      {
+        id: uuidv4(),
+        title: "Web Development",
+        icons: [
+          {
+            id: uuidv4(),
+            icon: <FaHtml5 />,
+          },
+          {
+            id: uuidv4(),
+            icon: <FaCss3 />,
+          },
+          {
+            id: uuidv4(),
+            icon: <FaJs />,
+          },
+          {
+            id: uuidv4(),
+            icon: <FaReact />,
+          },
+          {
+            id: uuidv4(),
+            icon: <SiNextdotjs />,
+          },
+          {
+            id: uuidv4(),
+            icon: <SiFramer />,
+          },
+          {
+            id: uuidv4(),
+            icon: <FaWordpress />,
+          },
+        ],
+      },
+      {
+        id: uuidv4(),
+        title: "UI/UX Design",
+        icons: [
+          {
+            id: uuidv4(),
+            icon: <FaFigma />,
+          },
+          {
+            id: uuidv4(),
+            icon: <SiAdobexd />,
+          },
+          {
+            id: uuidv4(),
+            icon: <SiAdobephotoshop />,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: uuidv4(),
+    title: "awards",
+    info: [
+      {
+        id: uuidv4(),
+        title: "Webby Awards - Honoree",
+        stage: "2011 - 2012",
+      },
+      {
+        id: uuidv4(),
+        title: "Adobe Design Achievement Awards - Finalist",
+        stage: "2009 - 2010",
+      },
+    ],
+  },
+  {
+    id: uuidv4(),
+    title: "experience",
+    info: [
+      {
+        id: uuidv4(),
+        title: "UX/UI Designer - XYZ Company",
+        stage: "2012 - 2023",
+      },
+      {
+        id: uuidv4(),
+        title: "Web Developer - ABC Agency",
+        stage: "2010 - 2012",
+      },
+      {
+        id: uuidv4(),
+        title: "Intern - DEF Corporation",
+        stage: "2008 - 2010",
+      },
+    ],
+  },
+  {
+    id: uuidv4(),
+    title: "credentials",
+    info: [
+      {
+        id: uuidv4(),
+        title: "Web Development - ABC University, LA, CA",
+        stage: "2011",
+      },
+      {
+        id: uuidv4(),
+        title: "Computer Science Diploma - AV Technical Institute",
+        stage: "2009",
+      },
+      {
+        id: uuidv4(),
+        title: "Certified Graphic Designer - ABC Institute, Los Angeles, CA",
+        stage: "2006",
+      },
+    ],
+  },
+];
