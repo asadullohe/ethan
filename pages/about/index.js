@@ -27,7 +27,7 @@ const About = () => {
   const [index, setIndex] = useState(0);
 
   return (
-    <div className="h-full bg-primary/30 py-32 text-center xl:text-left">
+    <div className="h-[100vh] bg-primary/30 py-32 text-center xl:text-left overflow-y-scroll">
       <Circles />
       <motion.div
         variants={fadeIn("right", 0.2)}
@@ -119,7 +119,7 @@ const About = () => {
           initial="hidden"
           animate="show"
           exit="hidden"
-          className="flex flex-col w-full xl:max-w-[40%] h-[480px] pt-0"
+          className="flex flex-col w-full xl:max-w-[40%] h-[480px] pt-10 xl:pt-0"
         >
           <div className="flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4">
             {aboutData.map((item, ind) => (
@@ -135,7 +135,7 @@ const About = () => {
               </div>
             ))}
           </div>
-          <div className="py-2 xl:py-6 flex flex-col gap-y-4 items-center xl:items-start">
+          <div className="py-2 xl:py-6 flex flex-col gap-y-3 items-center xl:items-start overflow-y-scroll">
             {aboutData[index].info.map((item, ind) => (
               <div
                 key={item.id}
