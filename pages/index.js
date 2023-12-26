@@ -9,15 +9,15 @@ import { fadeIn } from "../variants";
 
 const Home = () => {
   return (
-    <div className="bg-primary/60 h-full">
-      <div className="w-full h-full bg-gradient-to-r from-primary/10 via-black/30 to-black/10">
+    <div className="bg-primary/60 h-full select-none">
+      <div className="w-full h-full bg-gradient-to-r from-primary/10 via-black/30 to-black/10 z-50">
         <div className="text-center flex flex-col justify-center xl:pt-40 xl:text-left h-full container mx-auto">
           <motion.h1
             variants={fadeIn("down", 0.2)}
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="h1"
+            className="h1 mb-3 select-none"
           >
             Transforming Ideas <br /> Into{" "}
             <span className="text-accent">Digital Reality</span>
@@ -27,13 +27,13 @@ const Home = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16"
+            className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-4 xl:mb-16 select-none"
           >
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
             impedit perferendis eaque iste, assumenda fugit ullam esse error
             consequatur totam velit deserunt excepturi dolor rerum!
           </motion.p>
-          <div className="flex justify-center xl:hidden relative">
+          <div className="flex justify-center xl:hidden relative select-none mb-4">
             <ProjectsBtn />
           </div>
           <motion.div

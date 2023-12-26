@@ -12,9 +12,10 @@ const TestimonialSlider = () => {
   return (
     <Swiper
       navigation={true}
+      slidesPerView={1}
       modules={[Navigation, Pagination]}
       pagination={{ clickable: true }}
-      className="h-[400px]"
+      className="h-[450px]"
     >
       {testimonialData.map((person) => (
         <SwiperSlide key={person.id}>

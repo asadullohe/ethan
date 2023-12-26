@@ -38,8 +38,8 @@ const About = () => {
       >
         <Avatar />
       </motion.div>
-      <div className="container mx-auto h-full flex flex-col items-start justify-between xl:flex-row gap-x-8 pt-0 xl:pt-40">
-        <div className="flex-1 flex flex-col justify-center mx-auto">
+      <div className="container mx-auto h-full flex flex-col items-start justify-between xl:flex-row gap-x-4 pt-0 xl:pt-40">
+        <div className="w-full max-w-[600px] flex-1 flex flex-col justify-center">
           <motion.h2
             variants={fadeIn("right", 0.2)}
             initial="hidden"
@@ -119,7 +119,7 @@ const About = () => {
           initial="hidden"
           animate="show"
           exit="hidden"
-          className="flex flex-col w-full xl:max-w-[40%] h-[480px] pt-10 xl:pt-0"
+          className="flex flex-col w-full xl:max-w-[43%] h-[480px] pt-10 xl:pt-0"
         >
           <div className="flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4">
             {aboutData.map((item, ind) => (
@@ -135,13 +135,13 @@ const About = () => {
               </div>
             ))}
           </div>
-          <div className="py-2 xl:py-6 flex flex-col gap-y-3 items-center xl:items-start overflow-y-scroll">
-            {aboutData[index].info.map((item, ind) => (
+          <div className="py-2 xl:py-6 flex flex-col gap-y-3 items-center xl:items-start sm:overflow-hidden overflow-y-scroll sm:max-h-full max-h-[200px]">
+            {aboutData[index].info.map((item) => (
               <div
                 key={item.id}
                 className="flex flex-col flex-1 md:flex-row max-w-max gap-x-2 items-center text-white/60"
               >
-                <div className="font-light mb-2 md:mb-0 ">{item.title}</div>
+                <div className="font-light sm:text-[16px] text-[14px] mb-2 md:mb-0 ">{item.title}</div>
                 <div className="hidden md:flex">-</div>
                 <div>{item.stage}</div>
                 <div className="flex gap-x-4">
